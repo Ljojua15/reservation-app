@@ -14,19 +14,24 @@
          }"
     >
       <img class="auto-gallery__images__items--img"
+           ondragstart="return false"
            [src]="images.imgSrc"
            alt="*"
            (swipeleft) ="showPrev(i)"
-           (panleft)="showNext(i)"
+           (swiperight)="showNext(i)"
       >
 
     </div>
 
   </div>
   <div class="auto-gallery__points"></div>
-  <div class="auto-gallery__arrows"    *ngFor="let images of autoConfig;
-         let i = index">
-    <button     (click)="showPrev(i)">left</button>
-    <button>right</button>
+  <div class="auto-gallery__arrows">
   </div>
 </div>
+
+
+<section class="container"
+         (swipeleft)="decrease()"
+         (swiperight)="increase()">
+  <h1>{{ number }}</h1>
+</section>
