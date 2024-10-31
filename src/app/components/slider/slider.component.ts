@@ -13,31 +13,26 @@ import { HammerModule } from '@angular/platform-browser';
 export class SliderComponent {
   protected readonly autoConfig = galleryConfig;
 
-  selectedIndex = 1;
+  selectedIndex = 0;
 
   showPrev(i: number) {
-    console.log('left');
     if (this.selectedIndex > 0) {
       this.selectedIndex = i - 1;
-      console.log('left-in');
     }
+    console.log(this.selectedIndex, 'log');
   }
   showNext(i: number) {
-    console.log('right');
     if (this.selectedIndex < this.autoConfig.length - 1) {
       this.selectedIndex = i + 1;
-      console.log('right-in');
+      console.log(this.selectedIndex);
     }
   }
-
-  public number: number = 0;
-
-  increase() {
-    this.number++;
-  }
-
-  decrease() {
-    if (this.number === 0) return;
-    this.number--;
-  }
+  // showPrev() {
+  //   this.selectedIndex =
+  //     (this.selectedIndex - 1 + this.autoConfig.length) %
+  //     this.autoConfig.length;
+  // }
+  // showNext() {
+  //   this.selectedIndex = (this.selectedIndex + 1) % this.autoConfig.length;
+  // }
 }

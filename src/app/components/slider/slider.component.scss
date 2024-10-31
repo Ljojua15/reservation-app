@@ -25,10 +25,9 @@ align-items: center;
     position: relative;
     width: 236px;
     height: 132px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
     &__items{
       position: absolute;
@@ -49,6 +48,7 @@ align-items: center;
         transform: scale(0);
         opacity: 0;
         border-radius: 15px;
+        border: 2px solid red;
         user-select: none;
       }
 
@@ -61,6 +61,7 @@ align-items: center;
           opacity: 0.8;
           transform: translateX(-25%) scale(0.8);
           cursor: grab;
+          left: -170px;
         }
       }
       &--selected{
@@ -77,6 +78,7 @@ align-items: center;
           opacity: 0.8;
           transform: translateX(25%) scale(0.8);
           cursor: grab;
+          left: 170px;
         }
       }
       &--hide-right{
