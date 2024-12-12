@@ -1,7 +1,17 @@
-<div class="swiper">
-  <button><</button>
-  <div class="swiper__dates">
-    <div *ngFor="let items of [].constructor(3)"></div>
+<div class="main">
+  <div class="swiper">
+    <button (click)="leftClick()" ><</button>
+    <div #main class="swiper__dates"     
+    (mousedown)="onMouseDown($event)" 
+    (mousemove)="onMouseMove($event)" 
+    (mouseup)="onMouseUp()" 
+    (mouseleave)="onMouseLeave()">
+      <div *ngFor="let items of [].constructor(18)">1</div>
+    </div>
+    <button (click)="rightClick()">></button>
   </div>
-  <button>></button>
+  <div class="content">
+  
+  </div>
+  
 </div>

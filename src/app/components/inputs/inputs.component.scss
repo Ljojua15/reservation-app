@@ -1,0 +1,15 @@
+.main{
+    width: 400px;
+    height: 500px;
+    margin: 30px auto;
+    border: 2px solid red;
+    display: flex;
+    .input{
+        margin: 20px auto;
+        width: 90%;
+        height: 30px;
+        border: 2px solid green;
+        border-radius: 20px;
+        color: blue;
+    }
+}
