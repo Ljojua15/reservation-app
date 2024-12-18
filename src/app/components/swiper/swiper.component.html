@@ -6,12 +6,17 @@
     (mousemove)="onMouseMove($event)" 
     (mouseup)="onMouseUp()" 
     (mouseleave)="onMouseLeave()">
-      <div *ngFor="let items of [].constructor(18)">1</div>
+      <div 
+      *ngFor="let items of dateArray"
+      [ngClass]="{'active': items === currentDate, 'next': items > otherDates}"
+      (click)="changeContent(items)">
+      {{items}}
+    </div>
     </div>
     <button (click)="rightClick()">></button>
   </div>
   <div class="content">
-  
+    {{currentDate}}
   </div>
   
 </div>
