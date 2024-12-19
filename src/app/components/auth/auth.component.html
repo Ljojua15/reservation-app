@@ -1,1 +1,9 @@
-<p>auth works!</p>
+<div class="auth">
+    <h2 (click)="closeAuth()">X</h2>
+    <div class="auth__choose">
+        <div class="auth__choose--sign" [ngClass]="{active: tabs === 'up'}" (click)="changeTab('up')">რეგისტრაცია</div>
+        <div class="auth__choose--sign" [ngClass]="{active: tabs === 'in'}" (click)="changeTab('in')">შესვლა</div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
